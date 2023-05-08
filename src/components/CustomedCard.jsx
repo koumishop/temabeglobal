@@ -1,7 +1,7 @@
 import { Children } from 'react'
 import Card from 'react-animated-3d-card'
 
-const CustomedCard = ({width, height, children})=>{ 
+const CustomedCard = ({width, height, onClick, children})=>{ 
     return <Card       
       style={{
         backgroundColor: '#312F33',
@@ -13,7 +13,7 @@ const CustomedCard = ({width, height, children})=>{
         justifyContent:'center',
         alignItems:'center'
       }}
-      onClick={() => console.log('Card clicked')}
+      onClick={onClick}
     >{children}</Card>
 }
 

@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
+    "animate.css": "^4.1.1",
     "next": "13.3.4",
     "react": "18.2.0",
     "react-animated-3d-card": "^1.0.0",

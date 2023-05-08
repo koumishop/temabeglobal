@@ -1,16 +1,16 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import Link from 'next/link'
 import ParticlesBackground from '@/components/ParticlesBackground'
 import CustomedCard from '@/components/CustomedCard'
 import { TypeAnimation } from 'react-type-animation'
 
-const inter = Inter({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center justify-between p-24 ${openSans.className}`}
     >
       <ParticlesBackground/>
       <div className="relative flex">
