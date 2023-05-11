@@ -1,8 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { Open_Sans } from 'next/font/google'
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 const NavBar = ()=>{
     return(
-        <nav className='flex justify-between px-[5%] mb-[5%]'>
+        <nav className={`flex justify-between px-[5%] mb-[5%] ${openSans.className}`}>
             <Image
             className="relative"
             src="/temabe_logo.png"
@@ -12,11 +15,11 @@ const NavBar = ()=>{
             priority
             />
             <div className='w-1/2 flex items-center justify-between font-bold text-[15px]'>
-                <span className='cursor-pointer'>ACCUEIL</span>
-                <span className='cursor-pointer'>A PROPOS</span>
-                <span className='cursor-pointer'>SERVICES</span>
-                <span className='cursor-pointer'>BLOG</span>
-                <span className='cursor-pointer'>CONTACT</span>
+                <Link href="/home"><span className='cursor-pointer hover:text-primary'>ACCUEIL</span></Link>
+                <Link href="/about"><span className='cursor-pointer hover:text-primary'>A PROPOS</span></Link>
+                <Link href="/services"><span className='cursor-pointer hover:text-primary'>SERVICES</span></Link>
+                <Link href="/blog"><span className='cursor-pointer hover:text-primary'>BLOG</span></Link>
+                <span className='cursor-pointer hover:text-primary'><a href='/home#contacts'>CONTACT</a></span>
             </div>
         </nav>
     )
