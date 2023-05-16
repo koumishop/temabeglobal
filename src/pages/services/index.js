@@ -27,7 +27,7 @@ export default function Servicepage() {
                 <div className="w-1/2 space-y-10 pl-[8%]">
                     <h1 className="text-primary font-bold text-4xl">Nos services</h1>
                     <p className="w-[438px] text-4xl font-medium" id="values">
-                    Chez TEMABE GLOBAL, nous croyons en <strong className="font-medium">l'intégrité</strong>, <strong className="font-medium">l'innovation</strong>, <strong className="font-medium">la transparence</strong>, et <strong className="font-medium">le respect</strong>, pour <strong className="font-medium" id="goals">construire l'avenir ensemble</strong>.
+                    TEMABE GLOBAL est une entreprise de services qui accompagne ses clients dans leur <strong className='font-medium'>transformation digitale</strong>, mais aussi dans la <strong className='font-medium'>sous-traitance minière</strong>.
                     </p>
                     <Link href="/home#rdv"><button className="w-[295px] h-[56px] border-2 border-primary text-white bg-primary bg-opacity-40 hover:bg-opacity-0 mt-[30px] font-semibold rounded-full">Prendre rendez-vous</button></Link>
                 </div>
@@ -47,7 +47,7 @@ export default function Servicepage() {
                             <Icon icon="solar:safe-2-bold-duotone" width={80} height={80} color="#E4A951"/>
                             <span className='font-normal'>Sécurité des données</span>
                         </CustomedCard>
-                        <CustomedCard width="310px" height="185px" onClick={manageMine}>
+                        <CustomedCard width="310px" height="185px">
                             <Icon icon="bxs:hard-hat" width={80} height={80} color="#E4A951"/>
                             <span className='font-normal'>Sous-traitance minière</span>
                         </CustomedCard>                                                            
@@ -58,8 +58,8 @@ export default function Servicepage() {
                         <Icon icon="solar:inbox-archive-bold-duotone" width={50} height={50} color="#E4A951"/>
                         <span>Archivage numérique</span>
                     </h3>
-                    <div className="mt-2 text-dark text-xl mb-4">
-                        <p>
+                    <div className="mt-2 text-dark mb-4">
+                        <p className='text-sm text-gray-500'>
                         TEMABE GLOBAL est spécaliste de l'archivage et la conservation de vos documents de manière confidentielle et sécurisée. Nous vous accompagnons dans le processus d'archivage de vos documents physiques vers leur numérisation, afin de préserver votre histoire.
                         </p>
                     </div>

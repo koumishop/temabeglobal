@@ -1,7 +1,73 @@
-export default function Blogpage() {
+import Link from "next/link"
+import Image from "next/image"
+import NavBar from "@/components/NavBar"
+import Footer from "@/components/Footer"
+import Card from "@/components/Card"
+import { Open_Sans } from 'next/font/google'
+const openSans = Open_Sans({ subsets: ['latin'] })
+
+export default function Blogpage({ posts }) {
+
     return (
-        <h1>
-            BLOG
-        </h1>
+        <main className={`flex flex-col justify-between ${openSans.className}`}>
+            <NavBar/>
+            <section className='px-[10%]'>
+                <h1 className="text-primary font-bold text-4xl ml-[10%]">Blog</h1>
+                <div className='flex justify-center my-10 flex-wrap'>
+                {
+                    posts.map(
+                        post =>                    
+                    <Card key={post.slug}>
+                        <div className='h-[200px] object-cover rounded-t-lg relative'>
+                            <Image src={ post.img } alt={ post.title } className='border rounded-t-lg absolute' fill loading='lazy'/>
+                        </div>
+                        <div className='max-h-[260px] h-[240px] space-y-2 relative'>
+                            <h2 className='px-3 font-bold text-primary'>{ post.title }</h2>
+                            <p className='h-[120px] px-3 text-ellipsis overflow-hidden'>
+                            { post.article }
+                            </p>
+                            <Link href={`/blog/${post.slug}`}><button className='w-1/2 mt-2 mx-3 border-2 border-primary rounded-full hover:bg-primary hover:bg-opacity-40'>Lire l'article</button></Link>
+                        </div>
+
+                    </Card> 
+                        )
+                }
+                </div>
+            </section>
+            <Footer/>
+        </main>
     )
+}
+export async function getStaticProps(){
+    const posts=[
+        {
+            title:"Africa Tech Invest - Edition 2023",
+            img:"/assets/ati_article.jpg",
+            article:"#ATI23 Africa Tech Invest, première édition fut un véritable succès ! Deux jours de travaux intenses pour un seul objectif : trouver des solutions aux problématiques technologiques du secteur public. Nous tenons à remercier tous les participants qui ont répondu présents, nos formidables panelistes pour leur intervention de qualité ainsi que nos sponsors qui ont rendu cet événement possible. Aussi, nous saluons le travail exceptionnel réalisé par toute l’équipe ATI ! Un travail collectif de plusieurs mois qui a porté ses fruits. Nous vous donnons rendez-vous très bientôt pour la deuxième édition qui s’annonce d’ores et déjà explosive ! Dans cette attente, @anemone_tech et @temabeglobal continuent de poursuivre leurs efforts communs au service du secteur public pour une transformation digitale effective.",
+            slug:"ati-2023"
+        },
+        {
+            title:"Loi portant code numérique",
+            img:"/assets/code_numerique.jpeg",
+            article:"Le gouvernement a adopté le projet de loi portant Code du Numérique. Il a été présenté et défendu par le ministre du Numérique Eberande Kolongele lors de la 73e réunion du conseil des ministres tenue vendredi 14 octobre 2022. Déjà amendé par le conseil des ministres, il a indiqué que ce projet du Code Numérique a aussi bénéficié des commentaires et recommandations de certaines organisations internationales évoluant dans ce secteur. Intégrant ces préoccupations, les experts ont résolu de structurer le projet du code numérique en limitant strictement son champ d'application au seul secteur du numérique. Ainsi le texte est passé de 7 à 5 livres de manière à éviter tout conflit sur le champ d'application avec d'autres lois en vigueur notamment la loi sur les télécommunications et technologies de l'information et de la communication, précise Patrick Muyaya porte-parole du gouvernement. Par ailleurs, avec le recours au numérique, la RDC comme tout autre pays est confrontée à des nouveaux enjeux et défis, ceci se rapproche notamment à la protection de la vie privée, à la souveraineté numérique sur les données des citoyens avant la validité juridique de l'outil, de l'écrit et de la preuve électronique dans les échanges, à la protection des consommateurs dans le cadre du commerce électronique contre la propagation des fake news mais aussi aux réponses à réserver aux actes de malveillance sur le système d'information et dont peuvent être victimes des personnes physiques ou morales. La codification permet de regrouper des textes juridiques avec le but d'assurer une harmonisation entre les différents textes en mettant en place un tout cohérent. L'objectif premier est d'unifier les droits et les rendre lisibles et accessibles afin d'en faciliter l'application et l'interprétation, a conclu le ministre du Numérique. Depuis son accession à la magistrature suprême, Félix Tshisekedi à travers son gouvernement met un accent particulier sur le numérique afin de booster plusieurs secteurs de la vie nationale. Dans sa communication lors de la 63e réunion du conseil des ministres, le Chef de l'État Félix Tshisekedi était revenu sur la nécessité de numériser les archives de l’Etat. Il a déploré le violent incendie qui a ravagé une partie de l’immeuble SCPT (ex Onatra) occasionnant d'importants dégâts matériels et entraînant une perte irréversible des centaines des milliers des documents administratifs du domaine public.",
+            slug:"loi-code-numerique"
+        },
+        {
+            title:"ChatGPT Vs Bard",
+            img:"/assets/gpt_vs_bard.webp",
+            article:"Ça y est, après plusieurs mois d’attente, Google Bard est enfin testable par tout le monde. En réalité, il n’est disponible qu’en anglais et en dehors de l’Union européenne, mais nous avons quand même pu tester Google Bard pour comparer ses compétences avec celles de Bing Chat et de ChatGPT à travers différentes questions que nous leur avons posées. Il est à préciser que les usages de chaque outil sont quelque peu différents. Bing Chat est davantage conçu comme un moteur de recherche, qui va privilégier les sources qu’il utilise dans ses réponses, ce que ne font pas ses concurrents. Par ailleurs, Bing Chat et ChatGPT fonctionnent à partir du même modèle de langage, mais pas dans la même version : il s’agit de GPT-4 pour Bing Chat et de GPT-3.5 pour ChatGPT (GPT-4 y est disponible en souscrivant l’abonnement payant).",
+            slug:"chatgpt-vs-bard"
+        },
+        {
+            title:"Construire l'avenir numérique de l'Afrique",
+            img:"/assets/liquid_intelligent_technologies.png",
+            article:"Liquid Intelligent Technologies est un groupe technologique panafricain avec des capacités dans 14 pays, principalement en Afrique subsaharienne. Fondée en 2005, Liquid s’est solidement imposé comme le principal fournisseur panafricain d’infrastructures numériques. Liquid Intelligent Technologies redéfinit les offres réseau, cloud et cybersécurité grâce à des partenariats stratégiques avec des acteurs mondiaux de premier plan, des applications innovantes pour les entreprises, des services cloud intelligents et une sécurité de classe mondiale pour le continent africain. Liquid est aujourd’hui un groupe technologique à guichet unique qui fournit des solutions numériques sur mesure aux entreprises des secteurs public et privé à travers le continent. Le Groupe exploite également des centres de données à la pointe de la technologie à Johannesburg, Cape Town, Nairobi, Harare et Kigali, avec un potentiel combiné de 19 000 mètres carrés d’espace rack et 78 MW de capacité électrique. Grâce à cette offre combinée, Liquid Intelligent Technologies améliore l’expérience des clients sur leur parcours numérique.",
+            slug:"liquid-inteligent-technologies"
+        },
+    ]
+    return { 
+        props:{ 
+            posts
+         }
+     }
 }

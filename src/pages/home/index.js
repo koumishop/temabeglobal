@@ -84,7 +84,7 @@ export default function Homepage() {
                         </CustomedCard>
                     </div>
                     <div className="w-[68%] pb-5 px-2 flex space-x-4 flex-wrap">
-                        <CustomedCard width="310px" height="185px" onClick={manageMine}>
+                        <CustomedCard width="310px" height="185px">
                             <Icon icon="bxs:hard-hat" width={80} height={80} color="#E4A951"/>
                             <span className='font-normal'>Sous-traitance minière</span>
                         </CustomedCard>
@@ -101,8 +101,8 @@ export default function Homepage() {
                         <Icon icon="solar:inbox-archive-bold-duotone" width={50} height={50} color="#E4A951"/>
                         <span>Archivage numérique</span>
                     </h3>
-                    <div className="mt-2 text-dark text-xl mb-4">
-                        <p>
+                    <div className="mt-2 text-dark mb-4">
+                        <p className="text-sm text-gray-500">
                         TEMABE GLOBAL est spécaliste de l'archivage et la conservation de vos documents de manière confidentielle et sécurisée. Nous vous accompagnons dans le processus d'archivage de vos documents physiques vers leur numérisation, afin de préserver votre histoire.
                         </p>
                     </div>
