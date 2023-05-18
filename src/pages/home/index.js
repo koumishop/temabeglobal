@@ -28,7 +28,7 @@ export default function Homepage() {
 
 
     return(
-        <main className={`${openSans.className}`}>
+        <main className={` bg-dark ${openSans.className}`}>
             <NavBar/>
             <section className="px-[5%] py-[1%] flex justify-center items-center">
                 <div className="flex flex-col items-center">

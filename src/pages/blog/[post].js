@@ -16,7 +16,7 @@ export default function PostDetails({article}) {
     const router = useRouter()
 
     return(
-        <main className={`${openSans.className}`}>
+        <main className={`bg-dark ${openSans.className}`}>
             <NavBar/>
             <section className="flex flex-col items-center space-y-8 mb-[4%]">
               <h1 className="text-2xl text-primary font-bold">

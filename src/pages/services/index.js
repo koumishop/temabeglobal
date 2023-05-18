@@ -21,7 +21,7 @@ export default function Servicepage() {
     const manageMine = ()=> setOpenMine(!openMine)
 
     return (
-        <main className={`flex flex-col justify-between ${openSans.className}`}>
+        <main className={`bg-dark flex flex-col justify-between ${openSans.className}`}>
             <NavBar/>
             <section className="px-[5%] mb-[10%] flex items-center relative">
                 <div className="w-1/2 space-y-10 pl-[8%]">

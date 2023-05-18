@@ -9,7 +9,7 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 export default function Blogpage({ posts }) {
 
     return (
-        <main className={`flex flex-col justify-between ${openSans.className}`}>
+        <main className={`bg-dark flex flex-col justify-between ${openSans.className}`}>
             <NavBar/>
             <section className='px-[10%]'>
                 <h1 className="text-primary font-bold text-4xl ml-[10%]">Blog</h1>

@@ -7,7 +7,7 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 
 export default function Aboutpage() {
     return (
-        <main className={`flex flex-col justify-between ${openSans.className}`}>
+        <main className={`bg-dark flex flex-col justify-between ${openSans.className}`}>
             <NavBar/>
             <section className="px-[5%] flex items-center" id="aboutUs">
                 <div className="w-1/2 space-y-10 pl-[8%]">
