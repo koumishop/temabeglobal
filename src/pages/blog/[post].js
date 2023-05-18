@@ -63,7 +63,7 @@ export async function getStaticProps({ params }){
         },
         {
             title:"Construire l'avenir numérique de l'Afrique",
-            img:"liquid_intelligent_technologies.png",
+            img:"/assets/liquid_intelligent_technologies.png",
             article:"Liquid Intelligent Technologies est un groupe technologique panafricain avec des capacités dans 14 pays, principalement en Afrique subsaharienne. Fondée en 2005, Liquid s’est solidement imposé comme le principal fournisseur panafricain d’infrastructures numériques. Liquid Intelligent Technologies redéfinit les offres réseau, cloud et cybersécurité grâce à des partenariats stratégiques avec des acteurs mondiaux de premier plan, des applications innovantes pour les entreprises, des services cloud intelligents et une sécurité de classe mondiale pour le continent africain. Liquid est aujourd’hui un groupe technologique à guichet unique qui fournit des solutions numériques sur mesure aux entreprises des secteurs public et privé à travers le continent. Le Groupe exploite également des centres de données à la pointe de la technologie à Johannesburg, Cape Town, Nairobi, Harare et Kigali, avec un potentiel combiné de 19 000 mètres carrés d’espace rack et 78 MW de capacité électrique. Grâce à cette offre combinée, Liquid Intelligent Technologies améliore l’expérience des clients sur leur parcours numérique.",
             slug:"liquid-inteligent-technologies"
         },        
@@ -98,7 +98,7 @@ export async function getStaticPaths(){
         },
         {
             title:"Construire l'avenir numérique de l'Afrique",
-            img:"liquid_intelligent_technologies.png",
+            img:"/assets/liquid_intelligent_technologies.png",
             article:"Liquid Intelligent Technologies est un groupe technologique panafricain avec des capacités dans 14 pays, principalement en Afrique subsaharienne. Fondée en 2005, Liquid s’est solidement imposé comme le principal fournisseur panafricain d’infrastructures numériques. Liquid Intelligent Technologies redéfinit les offres réseau, cloud et cybersécurité grâce à des partenariats stratégiques avec des acteurs mondiaux de premier plan, des applications innovantes pour les entreprises, des services cloud intelligents et une sécurité de classe mondiale pour le continent africain. Liquid est aujourd’hui un groupe technologique à guichet unique qui fournit des solutions numériques sur mesure aux entreprises des secteurs public et privé à travers le continent. Le Groupe exploite également des centres de données à la pointe de la technologie à Johannesburg, Cape Town, Nairobi, Harare et Kigali, avec un potentiel combiné de 19 000 mètres carrés d’espace rack et 78 MW de capacité électrique. Grâce à cette offre combinée, Liquid Intelligent Technologies améliore l’expérience des clients sur leur parcours numérique.",
             slug:"liquid-inteligent-technologies"
         },        
