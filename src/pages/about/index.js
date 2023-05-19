@@ -10,7 +10,7 @@ export default function Aboutpage() {
     return (
         <>
             <Head><title>Temabe Global | A propos de nous</title></Head>
-            <main className={`bg-dark flex flex-col justify-between ${openSans.className}`}>
+            <main className={`bg-dark text-white flex flex-col justify-between ${openSans.className}`}>
                 <NavBar/>
                 <section className="md:px-[5%] md:flex md:items-center" id="aboutUs">
                     <div className="md:w-1/2 md:space-y-10 pl-[8%]">

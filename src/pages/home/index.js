@@ -31,7 +31,7 @@ export default function Homepage() {
     return(
         <>
             <Head><title>Temabe Global | Accueil</title></Head>
-            <main className={`border border-primary bg-dark ${openSans.className}`}>
+            <main className={`border border-primary bg-dark text-white ${openSans.className}`}>
                 <NavBar/>
                 <section className="border px-[5%] py-[1%] flex justify-center items-center">
                     <div className="flex flex-col items-center">

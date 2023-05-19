@@ -12,7 +12,7 @@ export default function Blogpage({ posts }) {
     return (
         <>
             <Head><title>Temabe Global | Notre blog</title></Head>
-            <main className={`bg-dark flex flex-col justify-between ${openSans.className}`}>
+            <main className={`bg-dark text-white flex flex-col justify-between ${openSans.className}`}>
                 <NavBar/>
                 <section className='px-[10%]'>
                     <h1 className="text-primary font-bold text-2xl my-4 md:my-0 md:text-4xl ml-[10%]">Blog</h1>

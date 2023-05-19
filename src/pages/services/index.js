@@ -24,7 +24,7 @@ export default function Servicepage() {
     return (
         <>
             <Head><title>Temabe Global | Nos services</title></Head>
-            <main className={`bg-dark flex flex-col justify-between ${openSans.className}`}>
+            <main className={`bg-dark text-white flex flex-col justify-between ${openSans.className}`}>
                 <NavBar/>
                 <section className="px-[5%] md:mb-[10%] md:flex md:items-center md:relative">
                     <div className="md:w-1/2 md:space-y-10 pl-[8%]">

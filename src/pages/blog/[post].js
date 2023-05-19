@@ -19,7 +19,7 @@ export default function PostDetails({article}) {
     return(
         <>
             <Head><title>Temabe Global | { article.title}</title></Head>
-            <main className={`bg-dark ${openSans.className}`}>
+            <main className={`bg-dark text-white ${openSans.className}`}>
                 <NavBar/>
                 <section className="flex flex-col items-center space-y-8 mb-[4%]">
                 <h1 className="text-2xl text-primary font-bold">
