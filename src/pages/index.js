@@ -10,7 +10,7 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${openSans.className}`}
+      className={`flex min-h-screen flex-col items-center bg-dark justify-between p-24 ${openSans.className}`}
     >
       <ParticlesBackground/>
       <div className="relative flex">
