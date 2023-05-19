@@ -6,8 +6,8 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 
 const Footer = ()=>{
     return(
-        <footer className={`border md:py-10 md:flex md:justify-center ${openSans.className}`}>
-            <Link href="/home" className="pt-5 border border-error">
+        <footer className={`md:py-10 md:flex md:justify-center ${openSans.className}`}>
+            <Link href="/home" className="pt-5">
                 <Image
                 className="md:relative"
                 src="/temabe_logo.png"
@@ -17,7 +17,7 @@ const Footer = ()=>{
                 priority
                 />
             </Link>
-            <div className="md:flex md:space-x-10 border border-error">
+            <div className="ml-4 md:ml-0 md:flex md:space-x-10">
                 <div className="space-y-4" id="contacts">
                     <h3 className="font-bold mt-2 md:mt-0">Contacts</h3>
                     <div className="hover:transform hover:scale-105 hover:text-primary cursor-pointer">
