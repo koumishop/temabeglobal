@@ -10,34 +10,38 @@ import {
     TwitterShareButton,
   } from 'next-share';
 import { Open_Sans } from 'next/font/google'
+import Head from "next/head";
 const openSans = Open_Sans({ subsets: ['latin'] })
   
 export default function PostDetails({article}) {
     const router = useRouter()
 
     return(
-        <main className={`bg-dark ${openSans.className}`}>
-            <NavBar/>
-            <section className="flex flex-col items-center space-y-8 mb-[4%]">
-              <h1 className="text-2xl text-primary font-bold">
-              { article.title}
-              </h1>
-              <Image src={article.img} alt={article.title} className='border-4 border-primary rounded-lg' width={800} height={400} loading='lazy'/>
-              <p className="w-1/2">
-              { article.article}
-              </p>
-              <div className="flex flex-col items-center space-y-2">
-                <span className="opacity-75 font-semibold">Partagez cet article sur</span>
-                <div className="flex items-center space-x-4">
-                    <span className="hover:transform hover:scale-125"><LinkedinShareButton url={`https://temabeglobal.com${router.asPath}`} ><Icon icon="uit:linkedin-alt" width={30} height={30} color="#E4A951"/></LinkedinShareButton></span>
-                    <span className="hover:transform hover:scale-125"><TwitterShareButton url={`https://temabeglobal.com${router.asPath}`} ><Icon icon="uit:twitter-alt" width={30} height={30} color="#E4A951"/></TwitterShareButton></span>
-                    <span className="hover:transform hover:scale-125"><FacebookShareButton url={`https://temabeglobal.com${router.asPath}`} ><Icon icon="uit:facebook-f" width={30} height={30} color="#E4A951"/></FacebookShareButton></span>                
+        <>
+            <Head><title>Temabe Global | { article.title}</title></Head>
+            <main className={`bg-dark ${openSans.className}`}>
+                <NavBar/>
+                <section className="flex flex-col items-center space-y-8 mb-[4%]">
+                <h1 className="text-2xl text-primary font-bold">
+                { article.title}
+                </h1>
+                <Image src={article.img} alt={article.title} className='border-4 border-primary rounded-lg' width={800} height={400} loading='lazy'/>
+                <p className="w-1/2">
+                { article.article}
+                </p>
+                <div className="flex flex-col items-center space-y-2">
+                    <span className="opacity-75 font-semibold">Partagez cet article sur</span>
+                    <div className="flex items-center space-x-4">
+                        <span className="hover:transform hover:scale-125"><LinkedinShareButton url={`https://temabeglobal.com${router.asPath}`} ><Icon icon="uit:linkedin-alt" width={30} height={30} color="#E4A951"/></LinkedinShareButton></span>
+                        <span className="hover:transform hover:scale-125"><TwitterShareButton url={`https://temabeglobal.com${router.asPath}`} ><Icon icon="uit:twitter-alt" width={30} height={30} color="#E4A951"/></TwitterShareButton></span>
+                        <span className="hover:transform hover:scale-125"><FacebookShareButton url={`https://temabeglobal.com${router.asPath}`} ><Icon icon="uit:facebook-f" width={30} height={30} color="#E4A951"/></FacebookShareButton></span>                
+                    </div>
                 </div>
-              </div>
-              <Link href="/blog" className='w-[10%] flex justify-center mx-3 border-2 border-primary rounded-full hover:bg-primary hover:bg-opacity-40'>Retour</Link>
-            </section>
-            <Footer/>
-        </main>
+                <Link href="/blog" className='w-[10%] flex justify-center mx-3 border-2 border-primary rounded-full hover:bg-primary hover:bg-opacity-40'>Retour</Link>
+                </section>
+                <Footer/>
+            </main>
+        </>
     )   
 }
 

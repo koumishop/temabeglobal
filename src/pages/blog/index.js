@@ -4,38 +4,42 @@ import NavBar from "@/components/NavBar"
 import Footer from "@/components/Footer"
 import Card from "@/components/Card"
 import { Open_Sans } from 'next/font/google'
+import Head from "next/head"
 const openSans = Open_Sans({ subsets: ['latin'] })
 
 export default function Blogpage({ posts }) {
 
     return (
-        <main className={`bg-dark flex flex-col justify-between ${openSans.className}`}>
-            <NavBar/>
-            <section className='px-[10%]'>
-                <h1 className="text-primary font-bold text-4xl ml-[10%]">Blog</h1>
-                <div className='flex justify-center my-10 flex-wrap'>
-                {
-                    posts.map(
-                        post =>                    
-                    <Card key={post.slug}>
-                        <div className='h-[200px] object-cover rounded-t-lg relative'>
-                            <Image src={ post.img } alt={ post.title } className='border rounded-t-lg absolute' fill loading='lazy'/>
-                        </div>
-                        <div className='max-h-[260px] h-[240px] space-y-2 relative'>
-                            <h2 className='px-3 font-bold text-primary'>{ post.title }</h2>
-                            <p className='h-[120px] px-3 text-ellipsis overflow-hidden'>
-                            { post.article }
-                            </p>
-                            <Link href={`/blog/${post.slug}`}><button className='w-1/2 mt-2 mx-3 border-2 border-primary rounded-full hover:bg-primary hover:bg-opacity-40'>Lire l'article</button></Link>
-                        </div>
+        <>
+            <Head><title>Temabe Global | Notre blog</title></Head>
+            <main className={`bg-dark flex flex-col justify-between ${openSans.className}`}>
+                <NavBar/>
+                <section className='px-[10%]'>
+                    <h1 className="text-primary font-bold text-2xl my-4 md:my-0 md:text-4xl ml-[10%]">Blog</h1>
+                    <div className='space-y-5 md:space-y-0 md:flex md:justify-center my-10 md:flex-wrap'>
+                    {
+                        posts.map(
+                            post =>                    
+                        <Card key={post.slug} width="md:w-1/4">
+                            <div className='h-[200px] object-cover rounded-t-lg relative'>
+                                <Image src={ post.img } alt={ post.title } className='border rounded-t-lg absolute' fill loading='lazy'/>
+                            </div>
+                            <div className='max-h-[260px] h-[240px] space-y-2 relative'>
+                                <h2 className='px-3 font-bold text-primary'>{ post.title }</h2>
+                                <p className='h-[120px] px-3 text-ellipsis overflow-hidden'>
+                                { post.article }
+                                </p>
+                                <Link href={`/blog/${post.slug}`}><button className='w-1/2 mt-2 mx-3 border-2 border-primary rounded-full hover:bg-primary hover:bg-opacity-40'>Lire l'article</button></Link>
+                            </div>
 
-                    </Card> 
-                        )
-                }
-                </div>
-            </section>
-            <Footer/>
-        </main>
+                        </Card> 
+                            )
+                    }
+                    </div>
+                </section>
+                <Footer/>
+            </main>
+        </>
     )
 }
 export async function getStaticProps(){

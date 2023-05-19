@@ -6,10 +6,10 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 
 const Footer = ()=>{
     return(
-        <footer className={`py-10 flex justify-center ${openSans.className}`}>
-            <Link href="/home" className="pt-5">
+        <footer className={`border md:py-10 md:flex md:justify-center ${openSans.className}`}>
+            <Link href="/home" className="pt-5 border border-error">
                 <Image
-                className="relative"
+                className="md:relative"
                 src="/temabe_logo.png"
                 alt="Temabe Logo"
                 width={156}
@@ -17,9 +17,9 @@ const Footer = ()=>{
                 priority
                 />
             </Link>
-            <div className="flex space-x-10">
+            <div className="md:flex md:space-x-10 border border-error">
                 <div className="space-y-4" id="contacts">
-                    <h3 className="font-bold">Contacts</h3>
+                    <h3 className="font-bold mt-2 md:mt-0">Contacts</h3>
                     <div className="hover:transform hover:scale-105 hover:text-primary cursor-pointer">
                         <a href="https://goo.gl/maps/qp4wBriawpJhzdyU7" className="flex items-center space-x-3" target="_blank">
                             <Icon icon="solar:map-point-wave-broken" width={30} height={30} color="#E4A951"/>
@@ -46,7 +46,7 @@ const Footer = ()=>{
                     </div>
                 </div>
                 <div className="space-y-4">
-                    <h3 className="font-bold">A propos de nous</h3>
+                    <h3 className="font-bold mt-4 md:mt-0">A propos de nous</h3>
                     <Link href="/about#aboutUs" className="flex items-center space-x-3 hover:transform hover:scale-105 hover:text-primary cursor-pointer">
                         <Icon icon="solar:city-broken" width={30} height={30} color="#E4A951"/>
                         <span>Qui sommes-nous</span>
@@ -65,7 +65,7 @@ const Footer = ()=>{
                     </Link>                    
                 </div>
                 <div className="space-y-4">
-                    <h3 className="font-bold">Nos services</h3>
+                    <h3 className=" mt-4 md:mt-0 font-bold">Nos services</h3>
                     <Link href="/services#archiveDev" className="flex items-center space-x-3 hover:transform hover:scale-105 hover:text-primary cursor-pointer">
                         <Icon icon="solar:inbox-archive-broken" width={30} height={30} color="#E4A951"/>
                         <span>Archivage numérique</span>
