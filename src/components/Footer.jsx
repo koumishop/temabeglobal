@@ -6,7 +6,7 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 
 const Footer = ()=>{
     return(
-        <footer className={`text-white md:py-10 md:flex md:justify-center ${openSans.className}`}>
+        <footer className={`text-white py-10 md:flex md:justify-center ${openSans.className}`}>
             <Link href="/home" className="pt-5">
                 <Image
                 className="md:relative"

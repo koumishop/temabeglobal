@@ -26,10 +26,10 @@ export default function Servicepage() {
             <Head><title>Temabe Global | Nos services</title></Head>
             <main className={`bg-dark text-white flex flex-col justify-between ${openSans.className}`}>
                 <NavBar/>
-                <section className="px-[5%] md:mb-[10%] md:flex md:items-center md:relative">
+                <section className="px-[5%] md:mb-[10%] md:flex md:items-center relative">
                     <div className="md:w-1/2 md:space-y-10 pl-[8%]">
                         <h1 className="text-primary font-bold text-2xl my-4 md:my-0 md:text-4xl">Nos services</h1>
-                        <p className="md:w-[438px] md:text-4xl md:font-medium" id="values">
+                        <p className="md:w-[438px] md:text-2xl md:font-medium" id="values">
                         TEMABE GLOBAL est une entreprise de services qui accompagne ses clients dans leur <strong className='font-medium'>transformation digitale</strong>, mais aussi dans la <strong className='font-medium'>sous-traitance minière</strong>.
                         </p>
                         <Link href="/home#rdv"><button className="w-[295px] h-[56px] border-2 border-primary text-white bg-primary bg-opacity-40 hover:bg-opacity-0 mt-[30px] font-semibold rounded-full">Prendre rendez-vous</button></Link>
