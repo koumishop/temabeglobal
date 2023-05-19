@@ -26,7 +26,7 @@ export default function PostDetails({article}) {
                 { article.title}
                 </h1>
                 <Image src={article.img} alt={article.title} className='border-4 border-primary rounded-lg' width={800} height={400} loading='lazy'/>
-                <p className="w-1/2">
+                <p className="w-full px-4 md:px-0 md:w-1/2">
                 { article.article}
                 </p>
                 <div className="flex flex-col items-center space-y-2">
@@ -37,7 +37,7 @@ export default function PostDetails({article}) {
                         <span className="hover:transform hover:scale-125"><FacebookShareButton url={`https://temabeglobal.com${router.asPath}`} ><Icon icon="uit:facebook-f" width={30} height={30} color="#E4A951"/></FacebookShareButton></span>                
                     </div>
                 </div>
-                <Link href="/blog" className='w-[10%] flex justify-center mx-3 border-2 border-primary rounded-full hover:bg-primary hover:bg-opacity-40'>Retour</Link>
+                <Link href="/blog" className='w-1/2 md:w-[10%] flex justify-center mx-3 border-2 border-primary rounded-full hover:bg-primary hover:bg-opacity-40'>Retour</Link>
                 </section>
                 <Footer/>
             </main>
