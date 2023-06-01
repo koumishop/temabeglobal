@@ -6,7 +6,7 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 const NavBar = ()=>{
     return(
         <nav className={`flex flex-col items-center md:h-[100px] md:flex-row md:justify-between md:px-[5%] md:mb-[5%] ${openSans.className}`}>
-            <Link href="/home" className="w-1/4relative">
+            <Link href="/home" className="w-1/4 relative">
                 <Image
                 src="/temabe_logo.png"
                 alt="Temabe Logo"
