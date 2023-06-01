@@ -72,27 +72,27 @@ export default function Homepage() {
                         <div className="w-[132px] h-0 border-2 border-white mt-[1.5%]"></div>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                        <div className="md:w-[78%] md:py-5 md:flex md:space-x-2">
-                            <CustomedCard width="305px" height="180px" onClick={manageArchive}>
+                        <div className="md:w-[78%] md:py-2.5 md:flex md:space-x-2">
+                            <CustomedCard width="w-[305px]" height="h-[180px]" onClick={manageArchive}>
                                 <Icon icon="solar:inbox-archive-bold-duotone" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Archivage numérique</span>
                             </CustomedCard>
-                            <CustomedCard width="305px" height="180px" onClick={managePortfolio}>
+                            <CustomedCard width="w-[305px]" height="h-[180px]" onClick={managePortfolio}>
                                 <Icon icon="solar:monitor-smartphone-bold-duotone" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal text-center'>Developpement de site web & applications mobiles</span>
                             </CustomedCard>
-                            <CustomedCard width="305px" height="180px" onClick={manageSecurity}>
+                            <CustomedCard width="w-[305px]" height="h-[180px]" onClick={manageSecurity}>
                                 <Icon icon="solar:safe-2-bold-duotone" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Sécurité des données</span>
                             </CustomedCard>
                         </div>
                         <div className="md:w-[78%] md:pb-5 md:flex md:space-x-2">
-                            <CustomedCard width="305px" height="180px">
+                            <CustomedCard width="w-[305px]" height="h-[180px]">
                                 <Icon icon="bxs:hard-hat" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Sous-traitance minière</span>
                             </CustomedCard>
                             <Link href="/services">
-                                <CustomedCard width="305px" height="180px">
+                                <CustomedCard width="w-[305px]" height="h-[180px]">
                                     <Icon icon="solar:widget-add-bold-duotone" width={80} height={80} color="#E4A951"/>
                                     <span className='font-normal'>Nos autres services</span>
                                 </CustomedCard>

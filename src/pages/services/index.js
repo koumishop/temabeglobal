@@ -36,21 +36,21 @@ export default function Servicepage() {
                     </div>
                     <div className='py-[8%] md:space-y-4' id='archiveDev'>
                         <div className='flex flex-col items-center md:flex-row md:space-x-4'>
-                            <CustomedCard width="310px" height="185px" onClick={manageArchive}>
+                            <CustomedCard width="w-[310px]" height="h-[185px]" onClick={manageArchive}>
                                 <Icon icon="solar:inbox-archive-bold-duotone" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Archivage numérique</span>
                             </CustomedCard>
-                            <CustomedCard width="310px" height="185px" onClick={managePortfolio}>
+                            <CustomedCard width="w-[310px]" height="h-[185px]" onClick={managePortfolio}>
                                 <Icon icon="solar:monitor-smartphone-bold-duotone" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal text-center'>Developpement de site web & applications mobiles</span>
                             </CustomedCard>
                         </div>
                         <div className='flex flex-col items-center md:flex-row md:space-x-4' id='securityMine'>
-                            <CustomedCard width="310px" height="185px" onClick={manageSecurity}>
+                            <CustomedCard width="w-[310px]" height="h-[185px]" onClick={manageSecurity}>
                                 <Icon icon="solar:safe-2-bold-duotone" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Sécurité des données</span>
                             </CustomedCard>
-                            <CustomedCard width="310px" height="185px">
+                            <CustomedCard width="w-[310px]" height="h-[185px]">
                                 <Icon icon="bxs:hard-hat" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Sous-traitance minière</span>
                             </CustomedCard>                                                            
