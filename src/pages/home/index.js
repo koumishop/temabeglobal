@@ -125,19 +125,22 @@ export default function Homepage() {
                             <Icon icon="solar:monitor-smartphone-bold-duotone" width={50} height={50} color="#E4A951"/>
                             <span>Developpement de site web & applications mobiles</span>
                         </h3>
-                        <div className="mt-2 mb-4 text-xl text-dark space-y-4 md:space-y-0 md:flex md:justify-between md:flex-wrap">
-                            <div className="md:w-[32%] h-[200px] z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
+                        <div className="mt-2 mb-4 text-xl text-dark space-y-4 md:space-y-0 md:flex md:justify-start md:flex-wrap">
+                            <div className="md:w-[32%] h-[200px] md:mr-2.5 md:mb-2.5 z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
                                 <a href="https://koumishop.com" target="_blank"><Image src="/assets/koumishop.png" className="absolute" loading="lazy" fill/></a>
                             </div>
-                            <div className="md:w-[32%] h-[200px] z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
+                            <div className="md:w-[32%] h-[200px] md:mr-2.5 md:mb-2.5 z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
                                 <a href="https://koumi-merchant.netlify.app/" target="_blank"><Image src="/assets/koumi_merchant.png" className="absolute" loading="lazy" fill/></a>
                             </div>                        
-                            <div className="md:w-[32%] h-[200px] z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
+                            <div className="md:w-[32%] h-[200px] md:mr-2.5 md:mb-2.5 z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
                                 <a href="https://match-making-app.netlify.app/" target="_blank"><Image src="/assets/match_making.png" className="absolute" loading="lazy" fill/></a>   
                             </div>
-                            <div className="md:w-[32%] h-[200px] mt-4 z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
+                            <div className="md:w-[32%] h-[200px] md:mr-2.5 md:mb-2.5 z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
                                 <a href="#"><Image src="/assets/temabe_global.png" className="absolute" loading="lazy" fill/></a>
-                            </div>                                                
+                            </div>
+                            <div className="md:w-[32%] h-[200px] md:mr-2.5 md:mb-2.5 z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
+                                <a href="http://temabefondation.org" target="_blank"><Image src="/assets/temabe_fondation.png" className="absolute" loading="lazy" fill/></a>
+                            </div>                                                                            
                         </div>
 
                         <div className="mt-4 text-dark">
