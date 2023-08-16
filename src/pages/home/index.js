@@ -140,7 +140,10 @@ export default function Homepage() {
                             </div>
                             <div className="md:w-[32%] h-[200px] md:mr-2.5 md:mb-2.5 z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
                                 <a href="http://temabefondation.org" target="_blank"><Image src="/assets/temabe_fondation.png" className="absolute" loading="lazy" fill/></a>
-                            </div>                                                                            
+                            </div>
+                            <div className="md:w-[32%] h-[200px] md:mr-2.5 md:mb-2.5 z-10 object-contain relative hover:transform hover:scale-105 hover:shadow-2xl hover:border-4 hover:border-primary">
+                                <a href="http://automail.temabeglobal.com" target="_blank"><Image src="/assets/automail.png" className="absolute" loading="lazy" fill/></a>
+                            </div>                                                                                                        
                         </div>
 
                         <div className="mt-4 text-dark">
