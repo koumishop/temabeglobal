@@ -11,6 +11,8 @@ import { useForm, ValidationError } from '@formspree/react';
 import { Open_Sans } from 'next/font/google'
 import Head from "next/head"
 const openSans = Open_Sans({ subsets: ['latin'] })
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export default function Homepage() {
     const [openArchivage, setOpenArchivage] = useState(false)
@@ -27,6 +29,25 @@ export default function Homepage() {
     const managePortfolio = ()=> setOpenPortfolio(!openPortfolio)  
     const manageMine = ()=> setOpenMine(!openMine)  
 
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+      };
 
     return(
         <>
@@ -198,6 +219,161 @@ export default function Homepage() {
                             </button>
                         </div>
                     </CustomedModal>                            
+                </section>
+                <section className={`py-4 bg-white`}>
+                    <div className="md:w-3/6 pb-2 mt-4 mb-[4%] flex flex-col items-center">
+                        <h2 className="text-dark text-[32px] font-semibold ml-4 md:ml-0">Nos partenaires</h2>
+                        <div className="w-[132px] h-0 border-2 border-dark mt-[1.5%]"></div>
+                    </div>
+                    <Carousel
+                            swipeable={false}
+                            draggable={false}
+                            showDots={false}
+                            responsive={responsive}
+                            infinite={true}
+                            autoPlay={true}
+                            autoPlaySpeed={900}
+                            keyBoardControl={true}
+                            customTransition="all .5"
+                            transitionDuration={300}
+                            containerClass="carousel-container"
+                            removeArrowOnDeviceType={["tablet", "mobile"]}
+                            dotListClass="custom-dot-list-style"
+                            itemClass="carousel-item-padding-40-px"
+                            className="mt-[-40px]"
+
+                    > 
+                    {/* <div className="flex justify-center items-center flex-wrap px-5"> */}
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_acp.png"
+                                alt="Temabe Logo"
+                                width={200}
+                                height={200}
+                                priority
+                            />
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_afrik_interim.png"
+                                alt="Temabe Logo"
+                                width={369}
+                                height={152}
+                                priority
+                            />
+                        </div>
+                        {/* <Image
+                            className="md:relative m-3"
+                            src="/assets/logo_dgrad.png"
+                            alt="Temabe Logo"
+                            width={369}
+                            height={152}
+                            priority
+                        /> */}
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_environnement.png"
+                                alt="Temabe Logo"
+                                width={369}
+                                height={152}
+                                priority
+                            />
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_fbnbank.png"
+                                alt="Temabe Logo"
+                                width={200}
+                                height={200}
+                                priority
+                            />
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_koumi.png"
+                                alt="Temabe Logo"
+                                width={200}
+                                height={200}
+                                priority
+                            />                        
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_assemblee_nat.png"
+                                alt="Temabe Logo"
+                                width={156}
+                                height={156}
+                                priority
+                            />
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_rawbank.png"
+                                alt="Temabe Logo"
+                                width={369}
+                                height={152}
+                                priority
+                            />                        
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_sante.png"
+                                alt="Temabe Logo"
+                                width={369}
+                                height={152}
+                                priority
+                            />                        
+                        </div>    
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_united.png"
+                                alt="Temabe Logo"
+                                width={156}
+                                height={156}
+                                priority
+                            />                        
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_ppc.png"
+                                alt="Temabe Logo"
+                                width={369}
+                                height={152}
+                                priority
+                            />
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_ug_pdss.png"
+                                alt="Temabe Logo"
+                                width={369}
+                                height={152}
+                                priority
+                            />
+                        </div>
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:absolute m-3"
+                                src="/assets/logo_dgrad.jpeg"
+                                alt="Temabe Logo"
+                                width={200}
+                                height={200}
+                                priority
+                            />
+                        </div>    
+                    {/* </div> */}
+                    </Carousel>
                 </section>
                 <section id="rdv" className={`md:h-[643px] pt-[5%] md:flex md:flex-col md:items-center ${style.rdvBg}`}>
                     <div className="md:w-3/6 mb-[4%] flex flex-col items-center">

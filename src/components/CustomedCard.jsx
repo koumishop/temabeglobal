@@ -1,4 +1,3 @@
-import Card from 'react-animated-3d-card'
 
 const CustomedCard = ({width, height, onClick, children})=>{ 
 return (
