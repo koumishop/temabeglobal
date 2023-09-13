@@ -264,14 +264,16 @@ export default function Homepage() {
                                 priority
                             />
                         </div>
-                        {/* <Image
-                            className="md:relative m-3"
-                            src="/assets/logo_dgrad.png"
-                            alt="Temabe Logo"
-                            width={369}
-                            height={152}
-                            priority
-                        /> */}
+                        <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
+                            <Image
+                                className="md:relative m-3"
+                                src="/assets/logo_gunia1.png"
+                                alt="Temabe Logo"
+                                width={369}
+                                height={152}
+                                priority
+                            />
+                        </div>
                         <div className="relative w-[300px] h-[300px] flex items-center justify-center overflow-auto">
                             <Image
                                 className="md:absolute m-3"
