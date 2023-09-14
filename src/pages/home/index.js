@@ -69,7 +69,7 @@ export default function Homepage() {
                     </div>
                     <div className={`w-1/2 h-[375px] md:h-[544px] pl-[1%] pt-[2%] bg-[length:590px_538px] bg-no-repeat bg-right ${style.atiBg}`}>
                         <div className="md:w-3/6 mb-[4%] flex flex-col items-center">
-                            <h2 className="text-dark text-[16px] mt-6 md:text-[32px] md:mt-0 font-semibold">Evenement annuel</h2>
+                            <h2 className="text-dark text-[16px] mt-6 md:text-[32px] md:mt-0 font-semibold">Evénement annuel</h2>
                             <div className="w-[132px] h-0 border-2 border-dark mt-[1.5%]"></div>
                         </div>
                         <span className="text-pink font-light md:font-bold text-xs md:text-lg md:pl-[5%]">La technologie au cœur de votre développement</span>
@@ -87,13 +87,13 @@ export default function Homepage() {
                         </div>
                     </div>
                 </section>
-                <section className="md:h-[800px] md:flex md:flex-col relative">
+                <section className="md:h-[800px] md:flex md:flex-col md:items-center relative">
                     <div className="md:w-3/6 pb-[4%] mt-[5%] mb-[4%] flex flex-col items-center">
                         <h2 className="text-white text-[32px] font-semibold ml-4 md:ml-0">Nos services</h2>
                         <div className="w-[132px] h-0 border-2 border-white mt-[1.5%]"></div>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                        <div className="md:w-[78%] md:py-2.5 md:flex md:space-x-2">
+                        <div className="md:w-[78%] md:py-2.5 md:flex md:justify-center md:flex-wrap md:space-x-2">
                             <CustomedCard width="w-[305px]" height="h-[180px]" onClick={manageArchive}>
                                 <Icon icon="solar:inbox-archive-bold-duotone" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Archivage numérique</span>
@@ -106,8 +106,6 @@ export default function Homepage() {
                                 <Icon icon="solar:safe-2-bold-duotone" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Sécurité des données</span>
                             </CustomedCard>
-                        </div>
-                        <div className="md:w-[78%] md:pb-5 md:flex md:space-x-2">
                             <CustomedCard width="w-[305px]" height="h-[180px]">
                                 <Icon icon="bxs:hard-hat" width={80} height={80} color="#E4A951"/>
                                 <span className='font-normal'>Sous-traitance minière</span>
@@ -119,6 +117,18 @@ export default function Homepage() {
                                 </CustomedCard>
                             </Link>
                         </div>
+                        {/* <div className="border border-error md:w-[78%] md:pb-5 md:flex md:space-x-2">
+                            <CustomedCard width="w-[305px]" height="h-[180px]">
+                                <Icon icon="bxs:hard-hat" width={80} height={80} color="#E4A951"/>
+                                <span className='font-normal'>Sous-traitance minière</span>
+                            </CustomedCard>
+                            <Link href="/services">
+                                <CustomedCard width="w-[305px]" height="h-[180px]">
+                                    <Icon icon="solar:widget-add-bold-duotone" width={80} height={80} color="#E4A951"/>
+                                    <span className='font-normal'>Nos autres services</span>
+                                </CustomedCard>
+                            </Link>
+                        </div> */}
                     </div>
                     <CustomedModal isOpen={openArchivage}>
                         <h3 className="text-dark font-bold md:font-normal md:flex md:items-center md:text-4xl md:space-x-3 mb-4">
@@ -221,8 +231,8 @@ export default function Homepage() {
                     </CustomedModal>                            
                 </section>
                 <section className={`py-4 bg-white`}>
-                    <div className="md:w-3/6 pb-2 mt-4 mb-[4%] flex flex-col items-center">
-                        <h2 className="text-dark text-[32px] font-semibold ml-4 md:ml-0">Nos partenaires</h2>
+                    <div className="md:w-full pb-2 mt-4 mb-[4%] flex flex-col items-center">
+                        <h2 className="text-dark text-[32px] font-semibold ml-4 md:ml-0">Ils nous ont fait confiance</h2>
                         <div className="w-[132px] h-0 border-2 border-dark mt-[1.5%]"></div>
                     </div>
                     <Carousel
