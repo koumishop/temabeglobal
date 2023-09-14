@@ -231,8 +231,8 @@ export default function Homepage() {
                     </CustomedModal>                            
                 </section>
                 <section className={`py-4 bg-white`}>
-                    <div className="md:w-full pb-2 mt-4 mb-[4%] flex flex-col items-center">
-                        <h2 className="text-dark text-[32px] font-semibold ml-4 md:ml-0">Ils nous ont fait confiance</h2>
+                    <div className="md:w-full pb-2 mt-4 mb-8 md:mb-[4%] flex flex-col items-center">
+                        <h2 className="text-dark text-[32px] text-center font-semibold ml-4 md:ml-0">Ils nous ont fait confiance</h2>
                         <div className="w-[132px] h-0 border-2 border-dark mt-[1.5%]"></div>
                     </div>
                     <Carousel
@@ -250,7 +250,7 @@ export default function Homepage() {
                             removeArrowOnDeviceType={["tablet", "mobile"]}
                             dotListClass="custom-dot-list-style"
                             itemClass="carousel-item-padding-40-px"
-                            className="mt-[-40px]"
+                            className="mt-[-40px] pl-10 md:pl-0"
 
                     > 
                     {/* <div className="flex justify-center items-center flex-wrap px-5"> */}
